@@ -9,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html className="text-white">
-      <body className="max-w-7xl mx-auto">
+      <body className="max-w-7xl mx-auto bg-[#231f2b]">
         <Header />
         <Banner />
         {children}
