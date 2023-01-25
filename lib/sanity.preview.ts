@@ -11,7 +11,7 @@ if (!projectId || !dataset) {
 export const usePreview = definePreview({
     projectId,
     dataset,
-    onPublicAccessOnly: () => {
-      throw new Error('Not authenticated - preview not available')
-    }
+    // onPublicAccessOnly: () => {
+    //   throw new Error('Not authenticated - preview not available')
+    // }
 })
