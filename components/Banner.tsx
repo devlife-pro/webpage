@@ -1,8 +1,8 @@
 function Banner() {
   return (
     <div className=" mt-12">
-      <h3 className="text-[#ff0083] items-center flex justify-center 4k:text-xl">
-        DEVLIFE - LIMITED BETA RELEASE
+      <h3 className="text-[#ff0083] items-center flex justify-center  4k:text-xl">
+        LIMITED BETA RELEASE
       </h3>
       <div className="flex flex-col lg:space-x-5 justify-between font-bold px-10 py-5 mb-10 items-center">
         <div>
