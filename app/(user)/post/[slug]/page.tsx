@@ -42,7 +42,7 @@ async function Post({ params: { slug } }: Props) {
 
   return (
     <article className="px-10 pb-28 text-l sm:text-2xl 4k:text-2xl 4k:max-w-[1500px] mx-auto">
-      <section className="space-y-2 border border-purple-400 text-white rounded">
+      <section className="space-y-2 border border-purple-400 text-white rounded mb-4">
         <div className="relative min-h-56 flex flex-col md:flex-row justify-between bg-gradient-to-r from-purple-900 via-black to-pink-900 background-animate">
           <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
             <Image
@@ -74,7 +74,9 @@ async function Post({ params: { slug } }: Props) {
                   height={100}
                 />
                 <div className="">
-                  <h3 className="text-lg font-bold 4k:text-2xl">{post.author.name}</h3>
+                  <h3 className="text-lg font-bold 4k:text-2xl">
+                    {post.author.name}
+                  </h3>
                   {/* TODO: Author bio */}
                 </div>
               </div>
@@ -98,7 +100,7 @@ async function Post({ params: { slug } }: Props) {
       </section>
 
       <div className="text-2xl 4k:text-4xl">
-      <PortableText value={post.body} components={RichTextComponents} />
+        <PortableText value={post.body} components={RichTextComponents} />
       </div>
     </article>
   );
