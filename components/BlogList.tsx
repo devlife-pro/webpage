@@ -9,21 +9,20 @@ type Props = {
 
 function BlogList({ posts }: Props) {
   return (
-    <div>
-      {/* <hr className="border-purple-400 mb-10" /> */}
+    <div className="flex justify-center align-middle self-center items-center">
 
-      <div className="grid grid-cols-1 md:grid-cols-3 px-10 gap-10 gap-y-16 pb-24">
+      <div className="grid grid-cols-1 lg:grid-cols-3 px-10 gap-10 gap-y-16 pb-24 4k:grid-cols-4">
         {posts.map((post) => (
           <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
             <div className="flex flex-col group cursor-pointer">
               <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 duration-200 transition-transform ease-out">
                 <Image
-                  className="object-cover object-left lg:object-center"
+                  className="object-cover object-left lg:object-center rounded"
                   src={urlFor(post.mainImage).url()}
                   alt={post.author.name}
                   fill
                 />
-                <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
+                <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg drop-shadow-lg text-white p-6 flex justify-between rounded-b">
                   <div>
                     <p className="font-bold">{post.title}</p>
                     <p>
@@ -37,7 +36,7 @@ function BlogList({ posts }: Props) {
 
                   <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
                     {post.categories.map((category) => (
-                      <div className="bg-purple-400 text-center text-black py-1 px-3 rounded text-sm font-semibold">
+                      <div className="bg-purple-400 text-center text-black py-1 px-3 rounded text-sm font-semibold" >
                         <p>#{category.title}</p>
                       </div>
                     ))}

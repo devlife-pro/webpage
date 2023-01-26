@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <header className="flex items-center justify-between space-x-2 font-bold px-10 py-5 bg-[#151016] backdrop-blur-lg sticky top-0 dark:bg-[#151016]/60 bg-white/60 rounded-md z-10 border-b-2 border-gray-900 max-h-16 mt-4">
+    <header className="flex items-center justify-between space-x-2 font-bold px-10 py-5 bg-[#151016] backdrop-blur-lg sticky top-0 dark:bg-[#151016]/60 bg-white/60 rounded-md z-10 border-b-2 border-gray-900 h-22 lg:h-16 md:h-18 mt-4 4k:h-24">
       <div className="flex items-center space-x-2">
         <Link href="/">
           <Image
@@ -15,7 +15,7 @@ function Header() {
           />
         </Link>
         <Link href="/">
-          <h1 className="text-white">Devlife</h1>
+          <h1 className="text-white md:text-base text-2xl 4k:text-3xl">Devlife</h1>
         </Link>
       </div>
       <div></div>

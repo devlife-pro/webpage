@@ -9,8 +9,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="text-white">
-      <body className="mx-auto bg-[#110f15] max-w-6xl">
+    <html className="text-white overflow-x-clip scrollbar-hide">
+      <body className="mx-auto bg-[#110f15] max-w-6xl 4k:max-w-[2000px]">
         <Header />
         <Banner />
         {children}
