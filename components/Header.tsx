@@ -3,11 +3,11 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <header className="flex items-center justify-between space-x-2 font-bold px-10 py-5 bg-[#121016] backdrop-blur-lg sticky top-0 dark:bg-[#12181d]/60 bg-white/60 rounded-md z-10 border-b-2 border-gray-900">
+    <header className="flex items-center justify-between space-x-2 font-bold px-10 py-5 bg-[#151016] backdrop-blur-lg sticky top-0 dark:bg-[#151016]/60 bg-white/60 rounded-md z-10 border-b-2 border-gray-900 max-h-16 mt-4">
       <div className="flex items-center space-x-2">
         <Link href="/">
           <Image
-            src="https://i.imgur.com/U2tAYnX.png"
+            src="https://i.imgur.com/JM6YrSM.jpg"
             width={50}
             className="rounded-full"
             height={50}
