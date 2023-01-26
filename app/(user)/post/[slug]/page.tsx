@@ -4,6 +4,7 @@ import urlFor from "../../../../lib/urlFor";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../../../components/RichTextComponents";
+import "../../../../styles/globals.css";
 
 type Props = {
   params: {
@@ -40,9 +41,9 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug });
 
   return (
-    <article className="px-10 pb-28 text-l sm:text-2xl 4k:text-4xl">
+    <article className="px-10 pb-28 text-l sm:text-2xl 4k:text-2xl 4k:max-w-[1500px] mx-auto">
       <section className="space-y-2 border border-purple-400 text-white rounded">
-        <div className="relative mi-h-56 flex flex-col md:flex-row justify-between">
+        <div className="relative min-h-56 flex flex-col md:flex-row justify-between bg-gradient-to-r from-purple-900 via-black to-pink-900 background-animate">
           <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
             <Image
               className="object-cover object-center mx-auto"
@@ -66,14 +67,14 @@ async function Post({ params: { slug } }: Props) {
               </div>
               <div className="flex items-center space-x-2">
                 <Image
-                  className="rounded-full object-cover h-10 w-10"
+                  className="rounded-full object-cover h-12 w-12 4k:h-14 4k:w-14"
                   src={urlFor(post.author.image).url()}
                   alt={post.author.name}
                   width={100}
                   height={100}
                 />
                 <div className="">
-                  <h3 className="text-lg font-bold">{post.author.name}</h3>
+                  <h3 className="text-lg font-bold 4k:text-2xl">{post.author.name}</h3>
                   {/* TODO: Author bio */}
                 </div>
               </div>
@@ -85,7 +86,7 @@ async function Post({ params: { slug } }: Props) {
                 {post.categories.map((category) => (
                   <p
                     key={category._id}
-                    className=" bg-purple-400 text-white px-3 py-1 rounded-full text-sm font-semibold mt-4"
+                    className=" bg-purple-400 text-white px-3 py-1 rounded-full text-sm font-semibold mt-4 4k:text-xl"
                   >
                     #{category.title}
                   </p>
