@@ -33,10 +33,10 @@ export const RichTextComponents = {
       <h2 className="text-4xl py-10 font-bold text-purple-400">{children}</h2>
     ),
     h3: ({ children }: any) => (
-      <h3 className="text-3xl py-10 font-bold text-blue-400">{children}</h3>
+      <h3 className="text-3xl py-10 font-bold text-pink-400">{children}</h3>
     ),
     h4: ({ children }: any) => (
-      <h4 className="text-2xl py-10 font-bold text-orange-400">{children}</h4>
+      <h4 className="text-2xl py-10 font-bold text-blue-400">{children}</h4>
     ),
 
     blockquote: ({ children }: any) => (
