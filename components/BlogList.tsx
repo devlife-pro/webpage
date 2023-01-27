@@ -48,12 +48,12 @@ function BlogList({ posts }: Props) {
                 <p className="underline text-lg font-bold">{post.title}</p>
                 <p className="line-clamp-2 text-white">{post.description}</p>
               </div>
-              <div className="flex justify-between items-center mt-4 align-center">
+              <div className="flex justify-between items-center mt-4 text-center">
               <p className="mt-5 font-bold flex items-center group-hover:underline">
                 Read Post
                 <ArrowUpRightIcon className="ml-2 h-4 w-4" />
               </p>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 justify-center">
                 <Image
                   className="rounded-full object-cover h-10 w-10 4k:h-14 4k:w-14"
                   src={urlFor(post.author.image).url()}
@@ -62,7 +62,7 @@ function BlogList({ posts }: Props) {
                   height={100}
                 />
                 <div className="">
-                  <h3 className="text-lg font-bold 4k:text-2xl group-hover:underline text-purple-400">
+                  <h3 className="text-lg font-bold 4k:text-2xl group-hover:underline bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                     {post.author.name}
                   </h3>
                   {/* TODO: Author bio */}
