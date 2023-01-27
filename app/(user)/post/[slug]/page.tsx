@@ -83,7 +83,7 @@ async function Post({ params: { slug } }: Props) {
             </div>
 
             <div>
-              <h2 className="italic p-10">{post.description}</h2>
+              <h2 className="italic p-10 text-lg 4k:text-xl">{post.description}</h2>
               <div className="flex items-center justify-end mt-auto space-x-2">
                 {post.categories.map((category) => (
                   <p
@@ -99,7 +99,7 @@ async function Post({ params: { slug } }: Props) {
         </div>
       </section>
 
-      <div className="text-2xl 4k:text-4xl">
+      <div className="md:text-lg 4k:text-2xl leading-relaxed break-all">
         <PortableText value={post.body} components={RichTextComponents} />
       </div>
     </article>
