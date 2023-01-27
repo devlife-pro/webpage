@@ -41,10 +41,10 @@ async function Post({ params: { slug } }: Props) {
   const post: Post = await client.fetch(query, { slug });
 
   return (
-    <article className="px-10 pb-28 text-l sm:text-2xl 4k:text-2xl 4k:max-w-[1500px] mx-auto">
+    <article className="px-10 pb-28 text-l sm:text-2xl 4k:text-2xl mx-auto max-w-4xl 4k:max-w-[2000px]">
       <section className="space-y-2 border border-purple-400 text-white rounded mb-4">
-        <div className="relative min-h-56 flex flex-col md:flex-row justify-between bg-gradient-to-r from-purple-900 via-black to-pink-900 background-animate">
-          <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
+        <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
+          <div className="absolute top-0 w-full h-full opacity-10 blur-lg p-10">
             <Image
               className="object-cover object-center mx-auto"
               src={urlFor(post.mainImage).url()}
@@ -99,7 +99,7 @@ async function Post({ params: { slug } }: Props) {
         </div>
       </section>
 
-      <div className="md:text-lg 4k:text-2xl leading-relaxed break-all">
+      <div className="md:text-xl 4k:text-2xl leading-relaxed break-words">
         <PortableText value={post.body} components={RichTextComponents} />
       </div>
     </article>

@@ -10,7 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <html className="text-white overflow-x-clip scrollbar-hide">
-      <body className="mx-auto bg-[#110f15] max-w-6xl 4k:max-w-[2000px]">
+      <body className="mx-auto bg-gradient-to-tr from-purple-900 via-[#110f15] to-via-[#110f15] background-animate animate-bg backdrop-blur-xl">
         <Header />
         <Banner />
         {children}
