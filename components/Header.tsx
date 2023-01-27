@@ -16,7 +16,7 @@ function Header() {
           />
         </Link>
         <Link href="/">
-          <h1 className="text-white md:text-base text-2xl 4k:text-3xl flex justify-center items-center">
+          <h1 className="text-slate-300 md:text-base text-2xl 4k:text-3xl flex justify-center items-center no-underline hover:text-white transition-all">
             Devlife
             <ArrowUturnLeftIcon className="ml-2 h-4 w-4" />
           </h1>
