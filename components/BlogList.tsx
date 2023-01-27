@@ -9,7 +9,7 @@ type Props = {
 
 function BlogList({ posts }: Props) {
   return (
-    <div className="flex justify-center align-middle self-center items-center">
+    <div className="max-w-6xl mx-auto 4k:max-w-[2000px]">
 
       <div className="grid grid-cols-1 lg:grid-cols-3 px-10 gap-10 gap-y-16 pb-24 4k:grid-cols-4">
         {posts.map((post) => (
@@ -48,11 +48,27 @@ function BlogList({ posts }: Props) {
                 <p className="underline text-lg font-bold">{post.title}</p>
                 <p className="line-clamp-2 text-white">{post.description}</p>
               </div>
-
+              <div className="flex justify-between items-center mt-4 align-center">
               <p className="mt-5 font-bold flex items-center group-hover:underline">
                 Read Post
                 <ArrowUpRightIcon className="ml-2 h-4 w-4" />
               </p>
+              <div className="flex items-center space-x-2">
+                <Image
+                  className="rounded-full object-cover h-10 w-10 4k:h-14 4k:w-14"
+                  src={urlFor(post.author.image).url()}
+                  alt={post.author.name}
+                  width={100}
+                  height={100}
+                />
+                <div className="">
+                  <h3 className="text-lg font-bold 4k:text-2xl group-hover:underline text-purple-400">
+                    {post.author.name}
+                  </h3>
+                  {/* TODO: Author bio */}
+                </div>
+              </div>
+              </div>
             </div>
           </ClientSideRoute>
         ))}
